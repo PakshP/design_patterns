@@ -1,7 +1,5 @@
 package strategy;
 
-import java.util.Random;
-
 public class Forward extends Player{
     public Forward(String firstName, String lastName){
         super(firstName, lastName);
@@ -11,8 +9,7 @@ public class Forward extends Player{
 
 
     public void setDefenceBehavior() {
-        Random rand = new Random();
-        int prob = rand.nextInt(10);
+        int prob = super.rand.nextInt(10);
         if(prob <= 4){
             defenceBehavior = new ChasePuckBehavior();
         } else if (prob <= 9) {
@@ -21,8 +18,7 @@ public class Forward extends Player{
     }
 
     public void setOffenceBehavior() {
-        Random rand = new Random();
-        int prob = rand.nextInt(10);
+        int prob = super.rand.nextInt(10);
         if(prob <= 4) {
         offenceBehavior = new PassBehavior();
        } else if (prob <= 9){

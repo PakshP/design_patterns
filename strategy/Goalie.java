@@ -15,6 +15,7 @@ public class Goalie extends Player {
         offenceBehavior = new BlockGoalBehavior();
     }
 
+    @Override
     public String toString(){
         return super.toString() + " plays the position Goalie";
 }

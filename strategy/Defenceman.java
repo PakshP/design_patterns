@@ -1,5 +1,4 @@
 package strategy;
-import java.util.Random;
 
 public class Defenceman extends Player{
     public Defenceman(String firstName, String lastName){
@@ -9,8 +8,7 @@ public class Defenceman extends Player{
     }
 
     public void setDefenceBehavior() {
-        Random rand = new Random();
-        int prob = rand.nextInt(10);
+        int prob = super.rand.nextInt(10);
         if(prob <= 4){
         defenceBehavior = new ChasePuckBehavior();
         } else if (prob <= 9){
@@ -19,8 +17,7 @@ public class Defenceman extends Player{
     }
 
     public void setOffenceBehavior() {
-        Random rand = new Random();
-        int prob = rand.nextInt(10);
+        int prob = super.rand.nextInt(10);
         if(prob <= 8) {
         offenceBehavior = new PassBehavior();
         } else if (prob <= 9){
@@ -28,6 +25,7 @@ public class Defenceman extends Player{
         }
     }
 
+    @Override
     public String toString(){
         return super.toString() + " plays the position Defenceman";
     }

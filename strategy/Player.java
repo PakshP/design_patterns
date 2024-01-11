@@ -14,7 +14,7 @@ public abstract class Player {
     public Player(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
-
+        rand = new Random();
     }
 
     public abstract void setDefenceBehavior();
