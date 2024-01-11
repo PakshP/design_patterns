@@ -3,29 +3,29 @@ package strategy;
 import java.util.Random;
 
 public class Forward extends Player{
-    private Random rand;
     public Forward(String firstName, String lastName){
         super(firstName, lastName);
-        rand = new Random();
         setDefenceBehavior();
         setOffenceBehavior();
     }
 
 
-    @Override
     public void setDefenceBehavior() {
-        if(rand.nextBoolean()){
-        defenceBehavior = new ChasePuckBehavior();
-        } else {
+        Random rand = new Random();
+        int prob = rand.nextInt(10);
+        if(prob <= 4){
+            defenceBehavior = new ChasePuckBehavior();
+        } else if (prob <= 9) {
             defenceBehavior = new BlockBehavior();
         }
     }
 
-    @Override
     public void setOffenceBehavior() {
-       if(rand.nextBoolean()) {
+        Random rand = new Random();
+        int prob = rand.nextInt(10);
+        if(prob <= 4) {
         offenceBehavior = new PassBehavior();
-       } else {
+       } else if (prob <= 9){
         offenceBehavior = new ShootBehavior();
        }
     }

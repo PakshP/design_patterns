@@ -7,17 +7,14 @@ public class Goalie extends Player {
         setOffenceBehavior();
     }
 
-    @Override
     public void setDefenceBehavior() {
         defenceBehavior = new BlockGoalBehavior();
     }
 
-    @Override
     public void setOffenceBehavior() {
         offenceBehavior = new BlockGoalBehavior();
     }
 
-    @Override
     public String toString(){
         return super.toString() + " plays the position Goalie";
 }

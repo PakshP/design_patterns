@@ -14,7 +14,6 @@ public abstract class Player {
     public Player(String firstName, String lastName){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.rand = new Random();
 
     }
 

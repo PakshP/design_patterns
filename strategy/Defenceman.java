@@ -2,33 +2,32 @@ package strategy;
 import java.util.Random;
 
 public class Defenceman extends Player{
-    private Random rand;
     public Defenceman(String firstName, String lastName){
         super(firstName, lastName);
-        rand = new Random();
         setDefenceBehavior();
         setOffenceBehavior();
     }
 
-    @Override
     public void setDefenceBehavior() {
-        if(rand.nextBoolean()){
+        Random rand = new Random();
+        int prob = rand.nextInt(10);
+        if(prob <= 4){
         defenceBehavior = new ChasePuckBehavior();
-        } else {
+        } else if (prob <= 9){
             defenceBehavior = new BlockBehavior();
         }
     }
 
-    @Override
     public void setOffenceBehavior() {
-        if(rand.nextDouble() < 0.9) {
+        Random rand = new Random();
+        int prob = rand.nextInt(10);
+        if(prob <= 8) {
         offenceBehavior = new PassBehavior();
-        } else {
+        } else if (prob <= 9){
             offenceBehavior = new SlapShotBehavior();
         }
     }
 
-    @Override
     public String toString(){
         return super.toString() + " plays the position Defenceman";
     }
