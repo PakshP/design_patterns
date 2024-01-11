@@ -1,0 +1,33 @@
+####### Maple Leafs####### 
+ - Matt Murray plays the position: Goalie
+ - John Tavares plays the position: Forward
+ - Phil Kessel plays the position: Forward
+ - Timothy Liljegren plays the position: Defenceman
+ - Justin Holl plays the position: Defenceman
+Has Possession
+
+1. Execute Play, 2. Change Possession, 3. Quit: 1
+
+####### Executing Play ####### 
+Matt Murray plays the position: Goalie - catches the puck
+John Tavares plays the position: Forward - passes to a forward
+Phil Kessel plays the position: Forward - passes to a forward
+Timothy Liljegren plays the position: Defenceman - passes to a forward
+Justin Holl plays the position: Defenceman - passes to a forward
+
+1. Execute Play, 2. Change Possession, 3. Quit: 2
+
+####### Possession Change ####### 
+Doesn't have Possession
+
+1. Execute Play, 2. Change Possession, 3. Quit: 1
+
+####### Executing Play ####### 
+Matt Murray plays the position: Goalie - blocks puck with stick
+John Tavares plays the position: Forward - Chases the puck
+Phil Kessel plays the position: Forward - Chases the puck
+Timothy Liljegren plays the position: Defenceman - blocks player from shooting
+Justin Holl plays the position: Defenceman - Chases the puck
+
+1. Execute Play, 2. Change Possession, 3. Quit: 3
+Goodbye
