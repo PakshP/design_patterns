@@ -7,16 +7,19 @@ import java.util.Random;
  * 
  * @return string representation for the chose action
  * 
+ * @author paksh patel
  */
 public class BlockGoalBehavior implements DefenceBehavior,OffenceBehavior{
 
     public String play() {
         Random rand = new Random();
-        int prob = rand.nextInt(10);
-        if(prob <=4){
-            return "Blocking the Goal.";
-        } else if (prob <= 9){
+        int prob = rand.nextInt(9);
+        if(prob <=2){
+            return "Blocking the puck with stick.";
+        } else if (prob <= 5){
             return "Catching the puck.";
+        } else if (prob <= 8){
+            return "Blocking the puck with hand.";
         }
         return null;
     }

@@ -2,7 +2,7 @@ package strategy;
 import java.util.Random;
 
 /**
- * Block behavior that is set for players  using the defence behavior
+ * Block behavior that is set for players using the defence behavior
  * 
  * @author paksh patel
  */
