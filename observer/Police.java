@@ -32,9 +32,9 @@ public class Police implements Observer {
     /**
      * Updates the Police with information about a new cook sighting.
      *
-     * @param location      The location where the cook was sighted.
-     * @param description   A description of the sighting.
-     * @param accomplices   ArrayList of accomplices associated with the sighting.
+     * @param location The location where the cook was sighted.
+     * @param description A description of the sighting.
+     * @param accomplices ArrayList of accomplices associated with the sighting.
      */
     public void update(String location, String description, ArrayList<String> accomplices) {
         this.locations.add(location);
