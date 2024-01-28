@@ -1,9 +1,9 @@
 package decorator;
 
-public class Warrior {
 
-    public Warrior(String name) {
-        
-    }
+public class Warrior extends Player {
     
+    public Warrior(String name) {
+        super(FileReader.getLines("decorator/warrior.txt"), name);
+    }
 }

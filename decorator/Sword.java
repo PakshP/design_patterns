@@ -1,9 +1,13 @@
 package decorator;
 
-public class Sword {
+import java.util.ArrayList;
 
-    public Sword(Player warrior) {
-        //TODO Auto-generated constructor stub
-    }
+
+public class Sword extends PlayerDecorator {
     
+    public Sword(Player player) {
+        super(player);
+        ArrayList<String> swordDetails = FileReader.getLines("decorator/sword.txt");
+        integrateDecor(swordDetails);
+    }
 }
