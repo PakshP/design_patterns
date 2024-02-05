@@ -17,8 +17,8 @@ public abstract class State {
     }
 
     public String getNextWord() {
-        if (words.isEmpty()) { // Check if the words list is empty
-            return "Current working directory: " + new File(".").getAbsolutePath();
+        if (words.isEmpty()) {
+            return "No words available";
         }
         int index = rand.nextInt(words.size());
         return words.get(index);
