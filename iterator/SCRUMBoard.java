@@ -1,3 +1,5 @@
+
+
 public class SCRUMBoard {
     private String projectName;
     private TaskList todo;
@@ -12,28 +14,28 @@ public class SCRUMBoard {
     }
 
     public void addTicket(String name, String teamMember, int difficulty) {
-        todo.addTicket(name, teamMember, difficulty);
+        this.todo.addTicket(new Ticket (name, teamMember, difficulty));
     }
 
     public boolean startTicket(String name) {
-        Ticket ticket = todo.getTicket(name);
+        Ticket ticket = this.todo.getTicket(name);
         if (ticket != null) {
-            doing.addTicket(ticket);
+            this.doing.addTicket(ticket);
             return true;
         }
         return false;
     }
 
     public boolean finishTicket(String name) {
-        Ticket ticket = doing.getTicket(name);
+        Ticket ticket = this.doing.getTicket(name);
         if (ticket != null) {
-            done.addTicket(ticket);
+            this.done.addTicket(ticket);
             return true;
         }
         return false;
     }
 
     public String toString() {
-        return projectName + "\n" + todo + "\n" + doing + "\n" + done;
+        return "***** " + projectName + "*****" + "\n" + todo + "\n" + doing + "\n" + done;
     }
 }
