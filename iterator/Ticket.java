@@ -14,6 +14,6 @@ public class Ticket {
     }
 
     public String toString() {
-        return "Ticket: " + name + ", assigned to: " + teamMember + ", difficulty: " + difficulty;
+        return "- " + name + "(" + difficulty + ")" + " - " + teamMember;
     }
 }

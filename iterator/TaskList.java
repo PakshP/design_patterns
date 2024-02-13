@@ -11,26 +11,26 @@ public class TaskList {
 
     public void addTicket(String name, String teamMember, int difficulty) {
         Ticket ticket = new Ticket(name, teamMember, difficulty);
-        tickets[count] = ticket;
+        this.tickets[count] = ticket;
         count++;
     }
 
     public void addTicket(Ticket ticket) {
-        tickets[count] = ticket;
+        this.tickets[count] = ticket;
         count++;
     }
 
     public Ticket getTicket(String name) {
         for (int i = 0; i < count; i++) {
-            if (tickets[i].getName().equals(name)) {
-                return tickets[i];
+            if (this.tickets[i].getName().equals(name)) {
+                return this.tickets[i];
             }
         }
         return null;
     }
 
-    public TaskListIterator iterator() {
-        return new TaskListIterator(tickets);
+    public TaskListIterator createIterator() {
+        return new TaskListIterator(this.tickets);
     }
 
     public String toString() {

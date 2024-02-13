@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public class TaskListIterator implements Iterator{
+public class TaskListIterator {
     private Ticket[] tickets;
     private int position;
 
@@ -8,12 +8,12 @@ public class TaskListIterator implements Iterator{
         this.tickets = tickets;
         this.position = 0;
     }
-    
-    public bool hasNext() {
-        return position < tickets.length;
+
+    public boolean hasNext() {
+        return position < tickets.length && tickets[position] != null;
     }
 
-    public Ticket next(){
+    public Ticket next() {
         return tickets[position++];
     }
 }
