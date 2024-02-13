@@ -1,0 +1,12 @@
+***** Recipe Application******
+ToDo:
+- Create User Class(2) - Sam
+- Create Author Class(2) - Sam
+- Create Recipe Class(3) - Jim
+
+Doing:
+- Create all JSON Files(3) - Katie
+- Create Recipe Stub(1) - Jim
+
+Done:
+- Create Git Repo(0) - Katie

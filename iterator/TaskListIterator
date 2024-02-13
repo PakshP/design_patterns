@@ -1,0 +1,19 @@
+import java.util.Iterator;
+
+public class TaskListIterator implements Iterator{
+    private Ticket[] tickets;
+    private int position;
+
+    public TaskListIterator(Ticket[] tickets) {
+        this.tickets = tickets;
+        this.position = 0;
+    }
+    
+    public bool hasNext() {
+        return position < tickets.length;
+    }
+
+    public Ticket next(){
+        return tickets[position++];
+    }
+}
