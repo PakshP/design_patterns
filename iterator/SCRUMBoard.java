@@ -1,5 +1,3 @@
-
-
 public class SCRUMBoard {
     private String projectName;
     private TaskList todo;
@@ -14,7 +12,7 @@ public class SCRUMBoard {
     }
 
     public void addTicket(String name, String teamMember, int difficulty) {
-        this.todo.addTicket(new Ticket (name, teamMember, difficulty));
+        this.todo.addTicket(name, teamMember, difficulty);
     }
 
     public boolean startTicket(String name) {
@@ -36,6 +34,6 @@ public class SCRUMBoard {
     }
 
     public String toString() {
-        return "***** " + projectName + "*****" + "\n" + todo + "\n" + doing + "\n" + done;
+        return "***** " + this.projectName + "*****" + "\n" + this.todo + "\n" + this.doing + "\n" + this.done;
     }
 }

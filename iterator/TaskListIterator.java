@@ -10,10 +10,10 @@ public class TaskListIterator {
     }
 
     public boolean hasNext() {
-        return position < tickets.length && tickets[position] != null;
+        return this.position < this.tickets.length;
     }
 
     public Ticket next() {
-        return tickets[position++];
+        return this.tickets[this.position++];
     }
 }
